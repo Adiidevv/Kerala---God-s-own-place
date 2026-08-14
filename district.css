@@ -1,0 +1,752 @@
+/* ==================================================
+   DISTRICT PAGE
+================================================== */
+
+:root {
+
+    --green: #123c2b;
+    --green-dark: #09251b;
+    --gold: #b69b61;
+    --cream: #f5f1e8;
+    --cream-dark: #e9e3d5;
+    --white: #ffffff;
+    --gray: #6d716c;
+    --border: #ddd8cc;
+
+}
+
+
+/* ==================================================
+   BASIC
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    background: var(--cream);
+
+    color: var(--green);
+
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 6%;
+
+    background:
+        rgba(9, 37, 27, .95);
+
+    z-index: 1000;
+
+}
+
+
+.logo {
+
+    color: white;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+}
+
+
+.logo span {
+
+    display: block;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #cfc6ae;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.nav-cta {
+
+    padding:
+        12px 20px;
+
+    background: var(--gold);
+
+    color: white;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.district-hero {
+
+    min-height: 78vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 28, 19, .82),
+            rgba(5, 28, 19, .25)
+        );
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.district-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 28, 19, .9),
+            transparent 65%
+        );
+
+}
+
+
+.district-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding:
+        100px 8% 90px;
+
+    color: white;
+
+}
+
+
+.district-eyebrow {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold);
+
+    font-weight: 600;
+
+}
+
+
+.district-hero-content h1 {
+
+    margin:
+        12px 0 8px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(65px, 10vw, 150px);
+
+    font-weight: 500;
+
+    line-height: .8;
+
+}
+
+
+.district-tagline-large {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(24px, 3vw, 38px);
+
+    font-style: italic;
+
+    color: #eee8d8;
+
+}
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.district-container {
+
+    width: min(
+        1180px,
+        88%
+    );
+
+    margin: auto;
+
+}
+
+
+/* ==================================================
+   INTRODUCTION
+================================================== */
+
+.district-introduction {
+
+    padding:
+        110px 0;
+
+    background: var(--cream);
+
+}
+
+
+.district-container {
+
+    display: grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap: 80px;
+
+}
+
+
+.small-heading {
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+}
+
+
+.district-intro-heading h2,
+.district-section-heading h2 {
+
+    margin:
+        15px 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 5vw, 70px);
+
+    line-height: .95;
+
+    font-weight: 500;
+
+}
+
+
+.district-intro-heading h2 em,
+.district-section-heading h2 em {
+
+    color: var(--gold);
+
+    font-style: italic;
+
+}
+
+
+.district-description {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.district-description p {
+
+    color: var(--gray);
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+
+/* ==================================================
+   PLACES
+================================================== */
+
+.district-places {
+
+    padding:
+        110px 0;
+
+    background: white;
+
+}
+
+
+.district-section-heading {
+
+    margin-bottom: 50px;
+
+}
+
+
+.places-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+
+}
+
+
+/* ==================================================
+   PLACE CARD
+================================================== */
+
+.place-card {
+
+    background: var(--cream);
+
+    border:
+        1px solid var(--border);
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+.place-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0,0,0,.1);
+
+}
+
+
+.place-image {
+
+    height: 240px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.place-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .5s ease;
+
+}
+
+
+.place-card:hover
+.place-image img {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.place-image span {
+
+    position: absolute;
+
+    top: 16px;
+
+    left: 16px;
+
+    padding:
+        7px 10px;
+
+    background:
+        rgba(18,60,43,.9);
+
+    color: white;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.place-info {
+
+    padding: 25px;
+
+}
+
+
+.place-info h3 {
+
+    margin:
+        8px 0 10px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+}
+
+
+.place-info p {
+
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==================================================
+   LOADING
+================================================== */
+
+.district-loading {
+
+    grid-column:
+        1 / -1;
+
+    padding: 60px;
+
+    text-align: center;
+
+    color: var(--gray);
+
+}
+
+
+/* ==================================================
+   BACK BUTTON
+================================================== */
+
+.district-back {
+
+    padding:
+        70px 0;
+
+    text-align: center;
+
+    background: var(--cream);
+
+}
+
+
+.back-button {
+
+    display: inline-block;
+
+    padding:
+        15px 25px;
+
+    border:
+        1px solid var(--green);
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    transition: .3s ease;
+
+}
+
+
+.back-button:hover {
+
+    background: var(--green);
+
+    color: white;
+
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+
+    background:
+        var(--green-dark);
+
+    color: white;
+
+    padding:
+        60px 8% 25px;
+
+}
+
+
+.footer-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.footer-logo {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 35px;
+
+}
+
+
+.footer-top p {
+
+    color: #aaa;
+
+    font-size: 12px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+}
+
+
+.footer-links a {
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.footer-bottom {
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.1);
+
+    margin-top: 50px;
+
+    padding-top: 20px;
+
+    color: #888;
+
+    font-size: 10px;
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .nav-cta {
+
+        display: none;
+
+    }
+
+
+    .district-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .places-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .district-hero {
+
+        min-height: 70vh;
+
+    }
+
+
+    .district-hero-content {
+
+        padding:
+            80px 7% 60px;
+
+    }
+
+
+    .district-hero-content h1 {
+
+        font-size: 75px;
+
+    }
+
+
+    .footer-top {
+
+        flex-direction: column;
+
+    }
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+    }
+
+}
